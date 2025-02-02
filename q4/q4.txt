@@ -1,0 +1,35 @@
+# 4.A 
+
+O pior caso ocorre quando:
+- O valor do divisor é pequeno, levando a mais iterações alternando entre as funções 'RestoPositivo' e 'RestoNegativo'
+- O valor do dividendo é grande, próximo ao limite máximo positivo
+
+Com base nisso, foram utilizados os seguintes valores como entrada:
+- Dividendo: 0xFFFFFFFF 
+- Divisor: 1
+
+Resultados:
+- Plataforma executando a 100Hz
+- Foram executadas 357 instruções (obtido usando Single-Cycle)
+- Foram executados 1374 ciclos de clock (obtido usando Cycle Accurate)
+
+# 4.B 
+
+O pior caso ocorre quando:
+1. Entrada e Conversão
+- Cada dígito é o maior possível, resultando no maior número de iterçãoes para as funções de soma
+2. Divisão
+- O valor do divisor é pequeno, levando a mais iterações alternando entre as funções 'RestoPositivo' e 'RestoNegativo'
+- O valor do dividendo é grande, próximo ao limite máximo positivo
+3. Conversão do resultado para ASCII
+- São extraídos 5 dígitos do quociente
+- Cada extração envolve uma chamada da função de divisão
+
+Com base nisso, foram utilizados os seguintes valores como entrada:
+- Dividendo: 99999 
+- Divisor: 00001
+
+Resultados:
+- Plataforma executando a 100Hz
+- Foram executadas 2141 instruções (obtido usando Single-Cycle)
+- Foram executados 8191 ciclos de clock (obtido usando Cycle Accurate)

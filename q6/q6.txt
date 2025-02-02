@@ -1,0 +1,9 @@
+# Plataforma executadndo a 100Hz
+# Processador RISC-V Cycle Accurate
+
+24 instruções
+106 ciclos de clock
+
+Não há um pior caso, pois o número de instruções executadas é constante
+
+CPI = 106 / 24 = 4,41
